@@ -181,3 +181,12 @@
   - [SDF-based Sphere Collider](./lec30.2-sphere_sdf.md)
   - [Affine Particle-In-Cell Transfer](./lec30.3-apic_transfer.md)
   - [Summary](./lec30.4-summary.md)
+
+
+# Position Based Simulations
+- [Position Based Dynamics](./lec31-position_based_dynamics.md)
+  - [Particle Simulation Preliminaries](./lec31.1-pbd_preliminaries.m)
+  - [Core Framework]
+  - [Solver]
+- [PBD Constraint Types] (./lec32-pbd_constraint_types.md)
+- [Position Based Fluids](./lec33-position_based_fluids.md)
