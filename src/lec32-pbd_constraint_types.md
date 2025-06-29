@@ -1,3 +1,2 @@
 # Constraint Types for Position Based Dynamics Framework
-"In the following we will introduce different constraints that can be
-used to simulate a variety of materials such as articulated rigid bodies, soft bodies, cloth or even fluids with PBD."
+The general PBD framework is highly versatile and can be adapted to simulate a wide range of physical systems by defining appropriate constraints. In the following section we will cover a few common constraints that can be used to simulate a variety of materials, such as cloth, fluids, etc. 

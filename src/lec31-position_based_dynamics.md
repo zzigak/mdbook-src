@@ -1,17 +1,13 @@
 # Position Based Dynamics Framework
-" Classical dynamics simulation methods formulate the change of
-momentum of a system as a function of applied forces, and evolve
-positions through numerical integration of accelerations and velocities. Position-based approaches, instead, compute positions directly, based on the solution to a quasi-static problem."
+**Author of this lecture: [Žiga Kovačič](https://zzigak.github.io), Cornell University*
 
-"Position-based methods are tailored particularly for use in interactive environments. They provide a high level of control and are
-stable even when simple and fast explicit time integration schemes
-are used."
+This section introduces Position Based Dynamics (PBD). In the field of physical simulation, several dominant paradigms exist, each with a different level of abstraction for describing motion. 
 
-"In this tutorial we focus on position-based simulation methods
-which omit the velocity and acceleration layer and directly modify the positions."
+The most classical approach is force-based, which directly models Newton's second law. In a force-based paradigm, internal and external forces are accumulated to determine particle accelerations, which are then numerically integrated to find new velocities and positions. While physically accurate, these methods can suffer from instability with large time steps or stiff systems. 
 
-In this section we present Position-Based Dynamics (PBD), an approach which omits the velocity and acceleration layer and immediately works on the positions [MHHR07]. We will first describe
-the basic idea and the simulation algorithm of PBD
+Impulse-based methods operate one level higher, working directly with velocities and changes in momentum, but still rely on an underlying integration step.
+
+Position-based methods abstract this process even further. This paradigm bypasses the velocity and acceleration layers altogether, working immediately on the positions of particles. The central idea is to define the system's behavior through a set of geometric constraints. The simulation loop first predicts a new position for each particle based on its current velocity. Then, an iterative solver adjusts these predicted positions directly to ensure that all constraints are satisfied. This process of constraint projection replaces the explicit integration of forces, leading to highly stable and visually plausible simulations. Because the solver directly manipulates positions, it avoids the instabilities of explicit integration and allows for trivial, direct user manipulation. These characteristics of stability, controllability, and ease of implementation make PBD an effective alternative to classical dynamics frameworks.
 
 
 
